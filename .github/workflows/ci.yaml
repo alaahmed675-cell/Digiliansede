@@ -4,5 +4,11 @@ jobs:
   unit-test:
     runs-on: ubuntu-latest
     steps:
-      - name: welcome
-        run: echo hello world 
+      - name: checkout
+        uses: action/checkout@v4
+
+      - name: list files
+        run: ls -la
+
+      - name: reed readme
+        run: cat REDME.md
